@@ -4,6 +4,7 @@ import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js"
 import connectDB from "./config/db.js";
 import dotenv from 'dotenv';
+import serverless from 'serverless-http';
 
 const app = express()
 
@@ -35,4 +36,4 @@ app.use('/ping',(req,res) => {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
-module.exports.handler = serverless(app);
+export const handler = serverless(app);
