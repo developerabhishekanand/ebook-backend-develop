@@ -34,3 +34,5 @@ app.use('/ping',(req,res) => {
 
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
+
+module.exports.handler = serverless(app);
