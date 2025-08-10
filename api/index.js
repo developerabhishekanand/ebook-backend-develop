@@ -40,4 +40,8 @@ app.use('/ping',(req,res) => {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
+export default function handler(req, res) {
+  res.status(200).json({ message: "Hello from Vercel!" });
+}
+
 export const handler = serverless(app);
