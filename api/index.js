@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from "cors";
-import bookRoute from "./route/book.route.js";
-import userRoute from "./route/user.route.js"
+import bookRoute from "../route/book.route.js";
+import userRoute from "../route/user.route.js"
 import connectDB from "./config/db.js";
 import dotenv from 'dotenv';
 import serverless from 'serverless-http';
@@ -44,4 +44,4 @@ export default function handler(req, res) {
   res.status(200).json({ message: "Hello from Vercel!" });
 }
 
-export const handler = serverless(app);
+// export const handler = serverless(app);
